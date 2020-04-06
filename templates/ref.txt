@@ -1,0 +1,4 @@
+https://stackabuse.com/serving-static-files-with-flask/
+https://stackoverflow.com/questions/33981310/javascript-function-not-working-with-html5-flask
+https://www.quora.com/How-can-I-render-HTML-templates-using-Flask-When-I-render-the-template-it-doesnt-show-up-with-its-CSS-and-JS-properties
+https://stackoverflow.com/questions/41250560/flask-where-to-put-static-javascript-files-in-templates

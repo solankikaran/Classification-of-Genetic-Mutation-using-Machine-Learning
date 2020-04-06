@@ -1,0 +1,393 @@
+<!doctype html> 
+<html> 
+<head>
+
+<meta charset ="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="../static/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+	<div class="jumbotron container-fluid ">
+		<div class="container">
+			<h3 align="center">Classification of Genetic Mutation using Machine Learning</h3>
+			<h5 align="center">Prediction results using Multiple Classifiers</h5>	
+		</div>
+	</div>
+	
+	<div class="container-fluid">
+		<table id="tblOne" style="width:50%; float:left" class="table table-hover table-striped table-bordered">
+			<caption>Prediction using Logistic Regression (TFIDF Encoding)</caption>
+			<tr>
+               <th>Predicted Class using Logistic Regression (TFIDF Encoding)</th>
+               <td> {{ result.get('Predicted Class using Logistic Regression (TFIDF Encoding)') }} </td>
+            </tr>
+			<tr>
+				<th>Gain-of-function (Logistic Regression TFIDF)</th>
+				<td> {{ result.get('Gain-of-function (Logistic Regression TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Inconclusive (Logistic Regression TFIDF)</th>
+				<td> {{ result.get('Inconclusive (Logistic Regression TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Gain-of-function (Logistic Regression TFIDF)</th>
+				<td> {{ result.get('Likely Gain-of-function (Logistic Regression TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Loss-of-function (Logistic Regression TFIDF)</th>
+				<td> {{ result.get('Likely Loss-of-function (Logistic Regression TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Neutral (Logistic Regression TFIDF)</th>
+				<td> {{ result.get('Likely Neutral (Logistic Regression TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Switch-of-function (Logistic Regression TFIDF)</th>
+				<td> {{ result.get('Likely Switch-of-function (Logistic Regression TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Loss-of-function (Logistic Regression TFIDF)</th>
+				<td> {{ result.get('Loss-of-function (Logistic Regression TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Neutral (Logistic Regression TFIDF)</th>
+				<td> {{ result.get('Neutral (Logistic Regression TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Switch-of-function (Logistic Regression TFIDF)</th>
+				<td> {{ result.get('Switch-of-function (Logistic Regression TFIDF)') }} </td>
+			</tr>
+		</table>
+	</div>
+	
+	<div class="container-fluid">
+		<table id="tblOne" style="width:50%; float:left" class="table table-hover table-striped table-bordered">
+			<caption>Prediction using Naive Bayes (TFIDF Encoding)</caption>
+			<tr>
+				<th>Predicted Class using Naive Bayes (TFIDF Encoding)</th>
+				<td> {{ result.get('Predicted Class using Naive Bayes (TFIDF Encoding)') }} </td>
+			</tr>
+			<tr>
+				<th>Gain-of-function (Naive Bayes TFIDF)</th>
+				<td> {{ result.get('Gain-of-function (Naive Bayes TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Inconclusive (Naive Bayes TFIDF)</th>
+				<td> {{ result.get('Inconclusive (Naive Bayes TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Gain-of-function (Naive Bayes TFIDF)</th>
+				<td> {{ result.get('Likely Gain-of-function (Naive Bayes TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Loss-of-function (Naive Bayes TFIDF)</th>
+				<td> {{ result.get('Likely Loss-of-function (Naive Bayes TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Neutral (Naive Bayes TFIDF)</th>
+				<td> {{ result.get('Likely Neutral (Naive Bayes TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Switch-of-function (Naive Bayes TFIDF)</th>
+				<td> {{ result.get('Likely Switch-of-function (Naive Bayes TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Loss-of-function (Naive Bayes TFIDF)</th>
+				<td> {{ result.get('Loss-of-function (Naive Bayes TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Neutral (Naive Bayes TFIDF)</th>
+				<td> {{ result.get('Neutral (Naive Bayes TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Switch-of-function (Naive Bayes TFIDF)</th>
+				<td> {{ result.get('Switch-of-function (Naive Bayes TFIDF)') }} </td>
+			</tr>
+		</table>
+	</div>
+  
+	
+	<div class="container-fluid">
+		<table id="tblThree" style="width:50%;  float:left" class="table table-hover table-striped table-bordered">
+			<caption>Prediction using K-NN (TFIDF Encoding)</caption>
+			<tr>
+               <th>Predicted Class using K-NN (TFIDF Encoding)</th>
+               <td> {{ result.get('Predicted Class using K-NN (TFIDF Encoding)') }} </td>
+            </tr>
+			<tr>
+				<th>Gain-of-function (K-NN TFIDF)</th>
+				<td> {{ result.get('Gain-of-function (K-NN TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Inconclusive (K-NN TFIDF)</th>
+				<td> {{ result.get('Inconclusive (K-NN TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Gain-of-function (K-NN TFIDF)</th>
+				<td> {{ result.get('Likely Gain-of-function (K-NN TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Loss-of-function (K-NN TFIDF)</th>
+				<td> {{ result.get('Likely Loss-of-function (K-NN TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Neutral (K-NN TFIDF)</th>
+				<td> {{ result.get('Likely Neutral (K-NN TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Switch-of-function (K-NN TFIDF)</th>
+				<td> {{ result.get('Likely Switch-of-function (K-NN TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Loss-of-function (K-NN TFIDF)</th>
+				<td> {{ result.get('Loss-of-function (K-NN TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Neutral (K-NN TFIDF)</th>
+				<td> {{ result.get('Neutral (K-NN TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Switch-of-function (K-NN TFIDF)</th>
+				<td> {{ result.get('Switch-of-function (K-NN TFIDF)') }} </td>
+			</tr>
+		</table>
+	</div>
+	  
+	<div class="container-fluid">
+		<table id="tblFour" style="width:50%;  float:left" class="table table-hover table-striped table-bordered">
+			<caption>Prediction using Random Forest (TFIDF Encoding)</caption>
+			<tr>
+               <th>Predicted Class using Random Forest (TFIDF Encoding)</th>
+               <td> {{ result.get('Predicted Class using Random Forest (TFIDF Encoding)') }} </td>
+            </tr>
+			<tr>
+				<th>Gain-of-function (Random Forest TFIDF)</th>
+				<td> {{ result.get('Gain-of-function (Random Forest TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Inconclusive (Random Forest TFIDF)</th>
+				<td> {{ result.get('Inconclusive (Random Forest TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Gain-of-function (Random Forest TFIDF)</th>
+				<td> {{ result.get('Likely Gain-of-function (Random Forest TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Loss-of-function (Random Forest TFIDF)</th>
+				<td> {{ result.get('Likely Loss-of-function (Random Forest TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Neutral (Random Forest TFIDF)</th>
+				<td> {{ result.get('Likely Neutral (Random Forest TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Switch-of-function (Random Forest TFIDF)</th>
+				<td> {{ result.get('Likely Switch-of-function (Random Forest TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Loss-of-function (Random Forest TFIDF)</th>
+				<td> {{ result.get('Loss-of-function (Random Forest TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Neutral (Random Forest TFIDF)</th>
+				<td> {{ result.get('Neutral (Random Forest TFIDF)') }} </td>
+			</tr>
+			<tr>
+				<th>Switch-of-function (Random Forest TFIDF)</th>
+				<td> {{ result.get('Switch-of-function (Random Forest TFIDF)') }} </td>
+			</tr>
+		</table>
+	</div>
+	
+	<!-- Bag of Words -->
+	
+	<div class="container-fluid">
+		<table id="tblOne" style="width:50%; float:left" class="table table-hover table-striped table-bordered">
+			<caption>Prediction using Logistic Regression (BOW Encoding)</caption>
+			<tr>
+               <th>Predicted Class using Logistic Regression (BOW Encoding)</th>
+               <td> {{ result.get('Predicted Class using Logistic Regression (BOW Encoding)') }} </td>
+            </tr>
+			<tr>
+				<th>Gain-of-function (Logistic Regression TFIDF)</th>
+				<td> {{ result.get('Gain-of-function (Logistic Regression BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Inconclusive (Logistic Regression BOW)</th>
+				<td> {{ result.get('Inconclusive (Logistic Regression BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Gain-of-function (Logistic Regression BOW)</th>
+				<td> {{ result.get('Likely Gain-of-function (Logistic Regression BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Loss-of-function (Logistic Regression BOW)</th>
+				<td> {{ result.get('Likely Loss-of-function (Logistic Regression BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Neutral (Logistic Regression BOW)</th>
+				<td> {{ result.get('Likely Neutral (Logistic Regression BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Switch-of-function (Logistic Regression BOW)</th>
+				<td> {{ result.get('Likely Switch-of-function (Logistic Regression BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Loss-of-function (Logistic Regression BOW)</th>
+				<td> {{ result.get('Loss-of-function (Logistic Regression BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Neutral (Logistic Regression BOW)</th>
+				<td> {{ result.get('Neutral (Logistic Regression BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Switch-of-function (Logistic Regression BOW)</th>
+				<td> {{ result.get('Switch-of-function (Logistic Regression BOW)') }} </td>
+			</tr>
+		</table>
+	</div>
+	
+	<div class="container-fluid">
+		<table id="tblOne" style="width:50%; float:left" class="table table-hover table-striped table-bordered">
+			<caption>Prediction using Naive Bayes (BOW Encoding)</caption>
+			<tr>
+				<th>Predicted Class using Naive Bayes (BOW Encoding)</th>
+				<td> {{ result.get('Predicted Class using Naive Bayes (BOW Encoding)') }} </td>
+			</tr>
+			<tr>
+				<th>Gain-of-function (Naive Bayes BOW)</th>
+				<td> {{ result.get('Gain-of-function (Naive Bayes BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Inconclusive (Naive Bayes BOW)</th>
+				<td> {{ result.get('Inconclusive (Naive Bayes BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Gain-of-function (Naive Bayes BOW)</th>
+				<td> {{ result.get('Likely Gain-of-function (Naive Bayes BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Loss-of-function (Naive Bayes BOW)</th>
+				<td> {{ result.get('Likely Loss-of-function (Naive Bayes BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Neutral (Naive Bayes BOW)</th>
+				<td> {{ result.get('Likely Neutral (Naive Bayes BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Switch-of-function (Naive Bayes BOW)</th>
+				<td> {{ result.get('Likely Switch-of-function (Naive Bayes BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Loss-of-function (Naive Bayes BOW)</th>
+				<td> {{ result.get('Loss-of-function (Naive Bayes BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Neutral (Naive Bayes BOW)</th>
+				<td> {{ result.get('Neutral (Naive Bayes BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Switch-of-function (Naive Bayes BOW)</th>
+				<td> {{ result.get('Switch-of-function (Naive Bayes BOW)') }} </td>
+			</tr>
+		</table>
+	</div>
+	
+		<div class="container-fluid">
+		<table id="tblThree" style="width:50%;  float:left" class="table table-hover table-striped table-bordered">
+			<caption>Prediction using K-NN (BOW Encoding)</caption>
+			<tr>
+               <th>Predicted Class using K-NN (BOW Encoding)</th>
+               <td> {{ result.get('Predicted Class using K-NN (BOW Encoding)') }} </td>
+            </tr>
+			<tr>
+				<th>Gain-of-function (K-NN BOW)</th>
+				<td> {{ result.get('Gain-of-function (K-NN BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Inconclusive (K-NN BOW)</th>
+				<td> {{ result.get('Inconclusive (K-NN BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Gain-of-function (K-NN BOW)</th>
+				<td> {{ result.get('Likely Gain-of-function (K-NN BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Loss-of-function (K-NN BOW)</th>
+				<td> {{ result.get('Likely Loss-of-function (K-NN BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Neutral (K-NN BOW)</th>
+				<td> {{ result.get('Likely Neutral (K-NN BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Switch-of-function (K-NN BOW)</th>
+				<td> {{ result.get('Likely Switch-of-function (K-NN BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Loss-of-function (K-NN BOW)</th>
+				<td> {{ result.get('Loss-of-function (K-NN BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Neutral (K-NN BOW)</th>
+				<td> {{ result.get('Neutral (K-NN BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Switch-of-function (K-NN BOW)</th>
+				<td> {{ result.get('Switch-of-function (K-NN BOW)') }} </td>
+			</tr>
+		</table>
+	</div>
+	
+	<div class="container-fluid">
+		<table id="tblFour" style="width:50%;  float:left" class="table table-hover table-striped table-bordered">
+			<caption>Prediction using Random Forest (BOW Encoding)</caption>
+			<tr>
+               <th>Predicted Class using Random Forest (BOW Encoding)</th>
+               <td> {{ result.get('Predicted Class using Random Forest (BOW Encoding)') }} </td>
+            </tr>
+			<tr>
+				<th>Gain-of-function (Random Forest BOW)</th>
+				<td> {{ result.get('Gain-of-function (Random Forest BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Inconclusive (Random Forest BOW)</th>
+				<td> {{ result.get('Inconclusive (Random Forest BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Gain-of-function (Random Forest BOW)</th>
+				<td> {{ result.get('Likely Gain-of-function (Random Forest BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Loss-of-function (Random Forest BOW)</th>
+				<td> {{ result.get('Likely Loss-of-function (Random Forest BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Neutral (Random Forest BOW)</th>
+				<td> {{ result.get('Likely Neutral (Random Forest BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Likely Switch-of-function (Random Forest BOW)</th>
+				<td> {{ result.get('Likely Switch-of-function (Random Forest BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Loss-of-function (Random Forest BOW)</th>
+				<td> {{ result.get('Loss-of-function (Random Forest BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Neutral (Random Forest BOW)</th>
+				<td> {{ result.get('Neutral (Random Forest BOW)') }} </td>
+			</tr>
+			<tr>
+				<th>Switch-of-function (Random Forest BOW)</th>
+				<td> {{ result.get('Switch-of-function (Random Forest BOW)') }} </td>
+			</tr>
+		</table>
+	</div>
+	
+	<script src="../static/bootstrap.min.js"></script>
+   </body> 
+</html> 
